@@ -8,7 +8,7 @@ require('nvim-tree').setup {
   hijack_netrw = true,
   hijack_unnamed_buffer_when_opening = false,
   ignore_buffer_on_setup = false,
-  open_on_setup = false,
+  open_on_setup = true,
   open_on_setup_file = false,
   open_on_tab = false,
   sort_by = "name",
@@ -38,7 +38,7 @@ require('nvim-tree').setup {
     highlight_opened_files = "none",
     root_folder_modifier = ":~",
     indent_markers = {
-      enable = false,
+      enable = true,
       icons = {
         corner = "└ ",
         edge = "│ ",
