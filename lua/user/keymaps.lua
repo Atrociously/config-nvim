@@ -7,5 +7,5 @@ keymap("n", "<leader>b[", "<cmd>bprevious<cr>", opts)
 keymap("n", "<leader>b]", "<cmd>bnext<cr>", opts)
 keymap("n", "<esc>", "", opts)
 
-keymap("n", "<C-n>", "<cmd>NvimTreeToggle<cr>", opts)
+keymap("n", "<C-n>", "<cmd>Neotree toggle<cr>", opts)
 keymap("n", "<leader>xx", "<cmd>TroubleToggle<cr>", opts)

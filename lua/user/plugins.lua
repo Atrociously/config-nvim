@@ -13,8 +13,13 @@ return require('packer').startup(function (use)
 
     -- Explorer
     use {
-        'nvim-tree/nvim-tree.lua',
-        requires = 'nvim-tree/nvim-web-devicons',
+        'nvim-neo-tree/neo-tree.nvim',
+        tag = "v2.x",
+        requires = {
+            'nvim-lua/plenary.nvim',
+            'nvim-tree/nvim-web-devicons',
+            'MunifTanjim/nui.nvim'
+        }
     }
 
     -- Tab / Buffer line
@@ -84,5 +89,10 @@ return require('packer').startup(function (use)
             'mfussenegger/nvim-dap',
             'nvim-lua/plenary.nvim',
         },
+    }
+
+    use {
+        'iamcco/markdown-preview.nvim',
+        run = function() vim.fn["mkdp#util#install"]() end
     }
 end)
