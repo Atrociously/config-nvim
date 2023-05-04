@@ -16,7 +16,7 @@ mason.setup({
 
 mason_lspconfig.setup({
     ensure_installed = {
-        "sumneko_lua",
+        "lua_ls",
         "bashls",
         "clangd",
         "cssls",
@@ -48,9 +48,8 @@ local on_attach = function(_, bufnr)
     local keymap = vim.keymap.set
     local bufopts = { noremap = true, silent = true, buffer=bufnr }
 
-    keymap("n", "<leader>cd", "<cmd>Lspsaga show_line_diagnostics<cr>", bufopts)
-    keymap("n", "<leader>ca", "<cmd>Lspsaga code_action<cr>", bufopts)
-    keymap("n", "<leader>rr", "<cmd>Lspsaga rename<cr>", bufopts)
+    keymap("n", "<leader>ca", vim.lsp.buf.code_action, bufopts)
+    keymap("n", "<leader>rr", vim.lsp.buf.rename, bufopts)
 end
 
 mason_lspconfig.setup_handlers({
